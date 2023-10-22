@@ -8,21 +8,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace REST.DataAccess.EntityFramework.Implement
 {
-    public class EfBookDal : GenericRepository<Book>, IEfBookDal
+    public class EfAuthorDal : GenericRepository<Author>, IEfAuthorDal
     {
         private readonly PatikaContext _context;
-        public EfBookDal(PatikaContext context) : base(context)
+        public EfAuthorDal(PatikaContext context) : base(context)
         {
             _context = context;
         }
-
-        public IList<Book> GetBooksByAuthorId(int AuthorId)
-        {
-            return _context.Book.Where(x => x.AuthorId == AuthorId && x.IsDeleted == false).ToList();
-
-        }
-
-
-
+       
     }
 }

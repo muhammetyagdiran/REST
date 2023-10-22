@@ -17,6 +17,7 @@ namespace REST.Business.Interface
         BookResponseDTO GetById(int BookId);
         BaseResponse<BookUpdateResponseDTO> Update(BookUpdateRequestDTO bookUpdateRequestDTO);
         BaseResponse Delete(int BookId);
+        IList<Book> GetBookByAuthorId(int AuthorId);
 
     }
 }

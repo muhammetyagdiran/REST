@@ -44,11 +44,6 @@ namespace REST.Controllers
         {
             return _genreService.Delete(GenreId);
         }
-        //[HttpPatch]
-        //[Route("Patch")]
-        //public BaseResponse Patch(int UserId)
-        //{
-        //    return null;
-        //}
+
     }
 }

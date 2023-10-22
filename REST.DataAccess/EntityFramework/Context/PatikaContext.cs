@@ -18,6 +18,7 @@ namespace REST.DataAccess.EntityFramework.Context
         public DbSet<User> User { get; set; }
         public DbSet<Book> Book { get; set; }
         public DbSet<Genre> Genre { get; set; }
+        public DbSet<Author> Author { get; set; }
 
     }
 }

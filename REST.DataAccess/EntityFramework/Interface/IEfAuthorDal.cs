@@ -11,8 +11,7 @@ using System.Threading.Tasks;
 
 namespace REST.DataAccess.EntityFramework.Interface
 {
-    public interface IEfBookDal : IGenericRepository<Book>
+    public interface IEfAuthorDal : IGenericRepository<Author>
     {
-        IList<Book> GetBooksByAuthorId(int AuthorId);
     }
 }

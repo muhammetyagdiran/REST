@@ -74,5 +74,9 @@ namespace REST.Business.Implement
                 return new BaseResponse<Book>("User not deleted");
             }
         }
+        public IList<Book> GetBookByAuthorId(int AuthorId)
+        {
+            return  _efBookDal.GetBooksByAuthorId(AuthorId);
+        }
     }
 }

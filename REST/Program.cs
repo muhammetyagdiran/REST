@@ -49,6 +49,8 @@ builder.Services.AddScoped<IEfBookDal, EfBookDal>();
 builder.Services.AddScoped<IBookService, BookManagement>();
 builder.Services.AddScoped<IGenreService, GenreManagement>();
 builder.Services.AddScoped<IEfGenreDal, EfGenreDal>();
+builder.Services.AddScoped<IEfAuthorDal, EfAuthorDal>();
+builder.Services.AddScoped<IAuthorService, AuthorManagement>();
 
 var app = builder.Build();
 
