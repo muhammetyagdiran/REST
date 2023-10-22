@@ -32,5 +32,11 @@ namespace REST.Controllers
         {
             return _bookService.Update(bookUpdateRequestDTO);
         }
+        [HttpDelete]
+        [Route("Delete/{BookId}")]
+        public BaseResponse Delete(int BookId)
+        {
+            return _bookService.Delete(BookId);
+        }
     }
 }

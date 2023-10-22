@@ -16,6 +16,7 @@ namespace REST.Entities
         public string Title { get; set; }
         public int GenreId { get; set; }
         public int PageCount { get; set; }
+        public bool IsDeleted { get; set; }
 
 
     }

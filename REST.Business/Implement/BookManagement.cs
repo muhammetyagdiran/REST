@@ -59,5 +59,20 @@ namespace REST.Business.Implement
             }
 
         }
+        public BaseResponse Delete(int BookId)
+        {
+            var Book = _efBookDal.Get(x => x.BookId == BookId && x.IsDeleted == false);
+            Book.IsDeleted = true;
+            var result = _efBookDal.Update(Book);
+            if (result == true)
+            {
+
+                return new BaseResponse<Book>(200);
+            }
+            else
+            {
+                return new BaseResponse<Book>("User not deleted");
+            }
+        }
     }
 }
