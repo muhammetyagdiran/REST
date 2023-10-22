@@ -45,6 +45,8 @@ builder.Services.AddAutoMapper(typeof(AutoMapperProfile).Assembly);
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 builder.Services.AddScoped<IUserService, UserManagement>();
 builder.Services.AddScoped<IEfUserDal, EfUserDal>();
+builder.Services.AddScoped<IEfBookDal, EfBookDal>();
+builder.Services.AddScoped<IBookService, BookManagement>();
 
 var app = builder.Build();
 
