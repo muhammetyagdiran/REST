@@ -32,7 +32,12 @@ builder.Services.AddControllers().AddFluentValidation(x =>
 });
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddLogging();
+builder.Services.AddLogging( x=>
+{
+    x.ClearProviders();
+    x.SetMinimumLevel(LogLevel.Information);
+    x.AddDebug();
+});
 
 builder.Services.AddAutoMapper(typeof(AutoMapperProfile).Assembly);
 
