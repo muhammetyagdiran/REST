@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using REST.Entities;
 using REST.Entities.DTOs.Book;
+using REST.Entities.DTOs.Genre;
 using REST.Entities.DTOs.User;
 using System;
 using System.Collections.Generic;
@@ -23,6 +24,14 @@ namespace REST.Business.Mapper
             CreateMap<BookUpdateResponseDTO, BookUpdateRequestDTO>();
             CreateMap<Book, BookUpdateRequestDTO>();
             CreateMap<BookUpdateRequestDTO, Book>();
+            CreateMap<GenreAddRequestDTO, GenreResponseDTO>();
+            CreateMap<GenreResponseDTO, GenreAddRequestDTO>();
+            CreateMap<Genre, GenreAddRequestDTO>();
+            CreateMap<GenreAddRequestDTO, Genre>();
+            CreateMap<GenreRequestDTO, GenreResponseDTO>();
+            CreateMap<GenreResponseDTO, GenreRequestDTO>();
+            CreateMap<Genre, GenreRequestDTO>();
+            CreateMap<GenreRequestDTO, Genre>();
         }
     }
 }
